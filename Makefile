@@ -6,13 +6,13 @@ INSTALL_DIR = $(INSTALL) -d
 INSTALL_FILE = $(INSTALL) -m 0644
 INSTALL_EXEC = $(INSTALL) -m 0755
 
+# Used ONLY for packaging / staging
 DESTDIR ?=
 
 all:
 	@echo "Nothing to build."
 
 install:
-	# /etc directories
 	$(INSTALL_DIR) "$(DESTDIR)$(SYSCONFDIR)/profile.d"
 	$(INSTALL_DIR) "$(DESTDIR)$(SYSCONFDIR)/ssh/sshd_config.d"
 	$(INSTALL_DIR) "$(DESTDIR)$(SYSCONFDIR)/security/limits.d"
